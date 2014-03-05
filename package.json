@@ -1,0 +1,25 @@
+{
+  "name": "method-invoker",
+  "version": "0.1.0",
+  "description": "Modifies method invocation behavior",
+  "author": {
+    "name": "Andre Cerqueira",
+    "email": "me@andrecerqueira.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/accerqueira/invoker.git"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/cucumber/bin/cucumber.js -f pretty"
+  },
+  "dependencies": {
+    "promise": "^4.0.0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.0",
+    "cucumber": "^0.3.3"
+  }
+}
