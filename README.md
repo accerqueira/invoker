@@ -150,8 +150,8 @@ Adds the specified function to the list of decorators to be applied.
 
 #### Invoker#decorate(fn, ctx)
 
-Decorates the specified function with all the configured methods.
+Decorates the specified function with all the configured methods, creating a new function that returns a Promise.
 
 ### Other
 
-All the static methods have a prototype version, which calls Invoker#execution on the returned decorator. There are also the following prototype methods.
+All the static methods have a prototype version, which calls Invoker#execution on the returned decorator.
