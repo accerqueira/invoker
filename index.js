@@ -14,15 +14,21 @@ Invoker.prototype.execution = function(fn) {
     return this;
 };
 
+Invoker.prototype.getDecorator = function(ctx) {
+    return (function(fn) {
+        var finalFn = fn.bind(ctx);
+
+        for (var i = this._decorators.length - 1; i >= 0; i--) {
+            var decorator = this._decorators[i];
+            finalFn = decorator(finalFn);
+        }
+
+        return finalFn;
+    }).bind(this);
+};
+
 Invoker.prototype.decorate = function(fn, ctx) {
-    var finalFn = fn.bind(ctx);
-
-    for (var i = this._decorators.length - 1; i >= 0; i--) {
-        var decorator = this._decorators[i];
-        finalFn = decorator(finalFn);
-    }
-
-    return finalFn;
+    return this.getDecorator(ctx)(fn);
 };
 
 Invoker.params = function(___) {

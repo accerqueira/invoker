@@ -156,6 +156,10 @@ Adds the specified function to the list of decorators to be applied.
 
 Decorates the specified function with all the configured methods, creating a new function that returns a Promise.
 
+#### Invoker#getDecorator(ctx)
+
+Returns a function with all the configured methods, that can be called with the function to be decorated.
+
 ### Other
 
 All the static methods have a prototype version, which calls Invoker#execution on the returned decorator.
