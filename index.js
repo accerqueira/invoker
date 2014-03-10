@@ -332,3 +332,11 @@ Invoker.limit = function(count) {
 Invoker.prototype.limit = function(count) {
     return this.execution(Invoker.limit(count));
 };
+
+Invoker.throttle = function(rate) {
+    return Invoker.interval(1/rate);
+};
+
+Invoker.prototype.throttle = function(rate) {
+    return this.execution(Invoker.throttle(rate));
+};

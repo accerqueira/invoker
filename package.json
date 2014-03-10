@@ -1,6 +1,6 @@
 {
   "name": "method-invoker",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Modifies method invocation behavior",
   "author": {
     "name": "Andre Cerqueira",

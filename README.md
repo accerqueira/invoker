@@ -141,6 +141,10 @@ Returns a function decorator for executing a function after X calls.
 
 Returns a function decorator for executing a function at most X times.
 
+#### Invoker.throttle(rate)
+
+Returns a function decorator for executing a function respecting the rate limit.
+
 
 ### Prototype Methods
 
